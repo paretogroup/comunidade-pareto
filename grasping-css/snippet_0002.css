@@ -1,3 +1,11 @@
 li {
   background-color: yellow;
 }
+
+li.preferido, li#preferido {
+  background-color: brown;
+}
+
+li#preferido {
+  background-color: gold;
+}
