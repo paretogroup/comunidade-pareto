@@ -1,20 +1,20 @@
 var teste = (idade) => {
-	let faixa;
-	let aptidoes = "";
+  let faixa;
+  let aptidoes = "";
 
-	if (idade < 16) {
-	  faixa = 1;
-	} else if (idade >= 16 && idade < 18) {
-	  faixa = 2;
-	} else if (idade >= 18 && idade < 60) {
-	  faixa = 3;
-	} else {
-	  faixa = 4;
-	}
+  if (idade < 16) {
+    faixa = 1;
+  } else if (idade >= 16 && idade < 18) {
+    faixa = 2;
+  } else if (idade >= 18 && idade < 60) {
+    faixa = 3;
+  } else {
+    faixa = 4;
+  }
 
-	switch (faixa) {
+  switch (faixa) {
     default: 
-     aptidoes = "não sei sua idade";
+      aptidoes = "não sei sua idade";
     case 4:
       aptidoes = "agora já tem prioridade! ";
     case 3:
@@ -23,7 +23,7 @@ var teste = (idade) => {
       aptidoes = "então você já pode votar, né? olha a responsa! " + aptidoes;
     case 1:
       aptidoes = "tem leite, mamãe? " + aptidoes;
-	}
+  }
 
-	return aptidoes;
+  return aptidoes;
 }
