@@ -1,5 +1,5 @@
 const validarCampos = function(campos) {
-  const validadores = [].slice.call(arguments).slice(1);
+  const validadores = [].slice.call(arguments, 1);
 
   for (const validador of validadores) {
     validador(campos);
