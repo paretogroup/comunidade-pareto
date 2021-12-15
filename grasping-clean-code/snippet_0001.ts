@@ -1,21 +1,25 @@
 type Produto = {
-  nome: String,
+  nome: string,
   dataValidade: Date,
-  valorUnitario: Number,
+  valorUnitario: number,
 }
 
 type NotaFiscal= {
   produtos: Produto[],
-  valorTotal: Number,
+  valorTotal: number,
   dataEmissao: Date,
 }
 
-const a = (notaFiscal: NotaFiscal): Produto[] => {
+const a = (notaFiscal: NotaFiscal): number => {
   const d = new Date();
 
   const b = notaFiscal.produtos.filter(produto => {
     return produto.dataValidade.valueOf() <= d.valueOf();
   });
 
-  return b;
+  const c = b.reduce((acumulador: number, produto: Produto) => {
+    return acumulador + produto.valorUnitario;
+  }, 0);
+
+  return c;
 }
