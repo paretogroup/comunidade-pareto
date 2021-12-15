@@ -10,7 +10,7 @@ type NotaFiscal= {
   dataEmissao: Date,
 }
 
-const a = (notaFiscal: NotaFiscal) => {
+const a = (notaFiscal: NotaFiscal): Produto[] => {
   const d = new Date();
 
   const b = notaFiscal.produtos.filter(produto => {
