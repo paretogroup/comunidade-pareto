@@ -4,13 +4,13 @@ type Produto = {
   valorUnitario: number,
 }
 
-type NotaFiscal= {
+type NotaFiscal = {
   produtos: Produto[],
   valorTotal: number,
   dataEmissao: Date,
 }
 
-const a = (notaFiscal: NotaFiscal): number => {
+const funcaoA = (notaFiscal: NotaFiscal): number => {
   const d = new Date();
 
   const b = notaFiscal.produtos.filter(produto => {
